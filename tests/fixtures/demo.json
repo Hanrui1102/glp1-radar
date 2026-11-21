@@ -1,0 +1,17 @@
+{
+  "records": [
+    {
+      "id": "demo:paper", "source": "DEMO", "title": "[Demo] Semaglutide safety research metadata",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/", "source_date": "",
+      "date_kind": "synthetic", "evidence_kind": "Synthetic example",
+      "drugs": ["semaglutide"], "topics": ["Safety"], "publication_types": []
+    },
+    {
+      "id": "demo:trial", "source": "DEMO", "title": "[Demo] Retatrutide trial registration",
+      "url": "https://clinicaltrials.gov/", "source_date": "",
+      "date_kind": "synthetic", "evidence_kind": "虚构测试条目，不代表真实试验",
+      "drugs": ["retatrutide"], "topics": [], "status": "DEMO_ONLY", "phases": [],
+      "has_results": false, "countries": []
+    }
+  ]
+}

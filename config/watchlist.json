@@ -1,0 +1,23 @@
+{
+  "drugs": {
+    "semaglutide": ["semaglutide", "司美格鲁肽"],
+    "tirzepatide": ["tirzepatide", "替尔泊肽"],
+    "retatrutide": ["retatrutide", "LY3437943"],
+    "orforglipron": ["orforglipron", "LY3502970"],
+    "survodutide": ["survodutide", "BI 456906"],
+    "cagrilintide": ["cagrilintide", "CagriSema"],
+    "amycretin": ["amycretin"],
+    "maridebart cafraglutide": ["maridebart cafraglutide", "MariTide", "AMG 133"]
+  },
+  "topics": {
+    "Safety": ["adverse", "safety", "pancreatitis", "gallbladder", "gastroparesis", "retinopathy", "suicid", "pregnan"],
+    "Treatment withdrawal": ["withdrawal", "discontinu", "maintenance", "regain"],
+    "Combined interventions": ["combination", "coadministr", "exercise", "resistance training", "protein", "nutrition"],
+    "Body composition": ["lean mass", "muscle", "body composition", "sarcopenia"],
+    "Cardiovascular and kidney outcomes": ["cardiovascular", "kidney", "renal", "heart failure"],
+    "Oral formulations": ["oral", "formulation", "once-monthly"],
+    "Direct comparisons": ["head-to-head", "versus", "compared with"]
+  },
+  "pubmed_days": 45,
+  "max_records_per_source": 500
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GLP-1 Evidence Radar</title>
+<style>
+:root{color-scheme:light;--ink:#173630;--muted:#596963;--line:#d7dfd6;--paper:#f5f6ef;--green:#245c48}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 system-ui,sans-serif}main{max-width:1160px;margin:auto;padding:48px 24px}header{border-top:5px solid var(--green);padding-top:25px}.eyebrow{font-size:12px;letter-spacing:.18em;font-weight:700}h1{font:clamp(32px,6vw,60px)/1.1 Georgia,serif;letter-spacing:-.04em;margin:18px 0}h2{font-size:21px}p{max-width:850px}.muted{color:var(--muted)}.notice{border-left:3px solid #a26e2c;padding:12px 18px;background:#f5eddf}.stats{display:flex;gap:30px;flex-wrap:wrap;margin:25px 0}.stats strong{display:block;font:32px Georgia,serif}.health{padding:14px 0;border-top:1px solid var(--line)}.filters{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:12px;margin:25px 0}label{font-size:12px;font-weight:650}input,select{width:100%;font:inherit;border:1px solid #aabcb2;border-radius:6px;background:white;padding:10px;margin-top:5px;color:var(--ink)}article{padding:24px 0;border-top:1px solid var(--line)}article h2{margin:7px 0}a{color:var(--green);text-underline-offset:4px}.tag{display:inline-block;font-size:12px;background:#e4ebe0;padding:3px 9px;border-radius:20px;margin:3px 5px 3px 0}.meta{font-size:13px;color:var(--muted)}.warning{color:#9a422d}button{padding:9px 18px;border:1px solid var(--green);background:transparent;color:var(--green);border-radius:4px;cursor:pointer}footer{padding-top:35px;border-top:1px solid var(--line);margin-top:35px;font-size:13px}@media(max-width:750px){.filters{grid-template-columns:1fr 1fr}main{padding:24px 18px}}
+details{padding:12px 0;border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:600}h2{margin-top:30px}
+main{padding-top:24px}header{background:#163e36;color:#fff;border:0;border-radius:14px;padding:24px 30px}header h1{font-size:clamp(32px,5vw,52px);margin:0}header p{margin:6px 0}.stats{display:none}nav,#topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 24px}nav a,#topic-grid button{text-decoration:none;text-align:left;border:1px solid var(--line);border-left:5px solid var(--accent,#42775c);border-radius:8px;background:white;padding:13px 16px;font-weight:700;color:var(--ink)}nav small{display:block;font-size:12px;color:var(--muted);font-weight:500}nav a[aria-current=page]{background:#173e35;color:white}nav a[aria-current=page] small{color:#e5eee7}nav a:hover,#topic-grid button:hover{outline:2px solid var(--accent,#42775c)}#topic-grid button[aria-pressed=true]{background:#d9eadf}#workspace{border-top:3px solid var(--accent,#42775c);background:#fff;padding:18px 24px;border-radius:10px}#workspace h2:first-child{margin-top:0}article h2{font-size:18px}article{padding:14px 0}#topic-grid{grid-template-columns:repeat(auto-fit,minmax(168px,1fr))}.filters{margin:14px 0}#workspace [hidden]{display:none}a:focus-visible,button:focus-visible{outline:3px solid #a46118}@media(max-width:680px){nav{grid-template-columns:repeat(2,minmax(0,1fr))}nav a{padding:9px}#workspace{padding:14px}header{padding:18px}.filters{grid-template-columns:1fr 1fr}}
+</style>
+<main>
+<header><h1>GLP-1 Evidence Radar</h1><p>Track metabolic drug research across journal publications and clinical trial registrations.</p></header>
+<p id="demo" class="warning"></p><div class="stats"><div><strong id="total"></strong>archived records</div><div><strong id="sources"></strong>sources refreshed</div></div><details><summary>Collection status</summary><p id="health"></p></details>
+<nav id="directory" aria-label="Research sections"></nav><section id="workspace"><h2 id="heading"></h2><div id="organizations"><h3>Research centers</h3><article><strong>Yale Center for Clinical Investigation</strong><p>Investigators are studying semaglutide and metabolic health in young adults with type 1 diabetes. This university listing describes the research question and eligibility.</p><a href="https://medicine.yale.edu/center-clinical-investigation/trial/glp-1-cardio/">University study record</a></article><h3>Recent papers by affiliation</h3><p>Open a live PubMed search sorted by publication date. Affiliation identifies an author’s institution. Studies can include several institutions and sponsors.</p><p><a href="https://pubmed.ncbi.nlm.nih.gov/?term=%28%22Yale+University%22%5BAffiliation%5D%29+AND+%28semaglutide+OR+tirzepatide+OR+retatrutide+OR+GLP-1%29&amp;sort=date">Yale University publications</a></p><p><a href="https://pubmed.ncbi.nlm.nih.gov/?term=%28%22University+of+Michigan%22%5BAffiliation%5D%29+AND+%28semaglutide+OR+tirzepatide+OR+retatrutide+OR+GLP-1%29&amp;sort=date">University of Michigan publications</a></p><p><a href="https://pubmed.ncbi.nlm.nih.gov/?term=%28%22Massachusetts+General+Hospital%22%5BAffiliation%5D%29+AND+%28semaglutide+OR+tirzepatide+OR+retatrutide+OR+GLP-1%29&amp;sort=date">Massachusetts General Hospital publications</a></p><h3>Manufacturer disclosures</h3><p>Selected November 2026 releases. The companies describe their own programs. Use trial records and published analyses to assess the findings.</p><article><strong>Novo Nordisk · November 14, 2026</strong><p>The sponsor reported phase 3 REDEFINE 9 results for CagriSema in adults with overweight or obesity.</p><a href="https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920561">Read the sponsor announcement</a></article><article><strong>Eli Lilly · November 14, 2026</strong><p>Lilly outlined its ObesityWeek presentations, including retatrutide research on sleep apnea and knee osteoarthritis.</p><a href="https://investor.lilly.com/news-releases/news-release-details/lilly-present-new-data-across-zepbound-foundayo-eloratzp-and">Read the conference announcement</a> · <a href="https://investor.lilly.com/rss-news-feeds">Official news feeds</a></article></div><div id="access-guide"><h3>U.S. self-pay price examples</h3><p>Source review: November 21, 2026. These examples use manufacturer terms for a 28-day supply. Check the linked terms for changes and eligibility.</p><article><strong>Wegovy · semaglutide injection</strong><p>Novo lists $349 for a regular month under its self-pay program. Introductory pricing has separate dates and eligibility rules.</p><a href="https://www.wegovy.com/obesity/what-to-pay-for-wegovy.html">Novo cost and coverage terms</a></article><article><strong>Zepbound · tirzepatide single-dose vials or KwikPen</strong><p>Lilly lists regular self-pay prices of $299 (2.5 mg), $399 (5 mg), $499 (7.5 mg) and $699 (10, 12.5 or 15 mg) per 28 days. Taxes and fees may apply. Conditional refill discounts have separate terms.</p><a href="https://zepbound.lilly.com/hcp/coverage-savings">Lilly price and eligibility terms</a></article><h3>Check your insurance coverage</h3><ol><li>Open your insurer’s member portal. Search the current plan-year formulary for the exact brand, formulation and prescribed indication.</li><li>Call the pharmacy benefits number on your card. Ask whether the product is covered for that indication, whether prior authorization or step therapy applies, and which pharmacies are in network.</li><li>Request an estimate for a 28-day fill. Ask how the deductible, copay or coinsurance affects the first fill and later refills. Record the reference number and date.</li><li>If coverage is denied, request the written reason, the exception or appeal instructions and the deadline. Share the letter with your prescriber.</li></ol><a href="https://www.healthcare.gov/using-marketplace-coverage/prescription-medications/">Marketplace drug coverage and exceptions</a> · <a href="https://www.healthcare.gov/using-marketplace-coverage/appealing-insurance-company-decisions/">Appealing a coverage decision</a></div><div id="updates"><p id="weekly"></p><ol id="feed"></ol>
+</div><div id="readings"><h3>Selected safety readings</h3><p>Three selected studies. Open a question for its population, comparison and limitations.</p>
+<details><summary>Semaglutide · How common was nausea?</summary><p>Across three STEP trials, 2,117 adults with overweight or obesity were assigned semaglutide and 1,262 placebo for 68 weeks. Nausea was reported by 43.9% and 16.1%, respectively. These pooled rates describe the trial populations and follow-up period. <a href="https://pubmed.ncbi.nlm.nih.gov/34514682/">Read the pooled analysis</a></p></details>
+<details><summary>Tirzepatide and semaglutide · What did routine care records show?</summary><p>A multicenter observational study included 1,115 patients with obesity receiving tirzepatide and 1,434 receiving semaglutide. At least one adverse event was recorded for 51.0% and 50.9%, respectively. Treatment selection and event recording can differ between groups, so similar percentages do not establish equivalent safety. <a href="https://pubmed.ncbi.nlm.nih.gov/42030208/">Read the observational study</a></p></details>
+<details><summary>Retatrutide · What did the phase 2 trial observe?</summary><p>Researchers assigned 338 adults with obesity or overweight and a weight-related condition to retatrutide or placebo for 48 weeks. Gastrointestinal symptoms were the most frequent adverse events in the retatrutide groups. Heart rate increases peaked around week 24. This sample and follow-up give limited information about rare or longer-term harms. <a href="https://pubmed.ncbi.nlm.nih.gov/37366315/">Read the phase 2 trial</a></p></details>
+</div><div id="archive"><div id="topic-grid" aria-label="Choose a topic"></div><label id="trial-tool">Registry results<select id="posted"><option value="">All trials</option><option value="yes">Results posted</option></select></label>
+<section class="filters"><label>Search titles or ingredients<input id="search" type="search"></label><label>Ingredient<select id="drug"><option value="">All ingredients</option></select></label><label>Topic<select id="topic"><option value="">All topics</option></select></label><label>Source<select id="source"><option value="">All sources</option></select></label></section>
+<p class="meta">Topic filters use keywords in titles and intervention names. Open the source record for study design and findings.</p><p id="count" aria-live="polite"></p><section id="results"></section><button id="more" hidden>Show 50 more</button></div></section><footer id="notice"></footer>
+</main>
+<script id="data" type="application/json">__RADAR_DATA__</script>
+<script>
+const data=JSON.parse(document.getElementById('data').textContent);
+const el=id=>document.getElementById(id);
+el('notice').textContent=data.notice;
+el('demo').textContent=data.demo?'Demo archive · synthetic search records':'';
+el('total').textContent=data.records.length;
+el('sources').textContent=Object.values(data.sources).filter(s=>s.status==='ok').length;
+el('health').textContent=data.last_run+' · '+Object.entries(data.sources).map(([name,s])=>name+' '+s.status+(s.truncated?' (collection limit reached)':'')+(s.last_success?' · last success '+s.last_success:'')).join(' / ');
+const cutoff=Date.parse(data.last_run)-7*86400000;
+const week=data.history.filter(e=>Date.parse(e.at)>=cutoff);
+const changes=week.filter(e=>e.summary!=='Initial collection');
+const baseline=week.length-changes.length;
+el('weekly').textContent='Seven days ending '+data.last_run.slice(0,10)+' UTC · '+changes.length+' observed updates'+(baseline?' · '+baseline+' records in the initial collection':'')+'.';
+for(const e of changes.slice(0,10)){
+ const row=node('li',e.at.slice(0,10)+' · '+(e.summary||e.kind)+' · ');
+ const link=node('a',e.title);link.href=e.url;row.append(link);el('feed').append(row);
+}
+if(Object.values(data.sources).some(s=>s.status==='error'))el('health').classList.add('warning');
+for(const [id,values] of [['drug',data.records.flatMap(r=>r.drugs)],['topic',data.records.flatMap(r=>r.topics)],['source',data.records.map(r=>r.source)]]){
+ for(const value of [...new Set(values)].sort()){const opt=document.createElement('option');opt.value=value;opt.textContent=value;el(id).append(opt)}
+}
+let limit=50;
+function node(tag,text,cls){const n=document.createElement(tag);n.textContent=text;if(cls)n.className=cls;return n}
+const sections = [
+ {id:'library', title:'All research', hint:'Search the archive', color:'#477a64', match:r=>true},
+ {id:'topics', title:'Research topics', hint:'Browse by health question', color:'#875674', match:r=>r.topics.length>0},
+ {id:'trials', title:'Clinical trials', hint:'Phases, status and results', color:'#386888', match:r=>r.source==='ClinicalTrials.gov'},
+ {id:'papers', title:'Publications', hint:'Journal articles and reviews', color:'#856734', match:r=>r.source==='PubMed'},
+ {id:'safety', title:'Safety & side effects', hint:'Study summaries and records', color:'#a55338', match:r=>r.topics.includes('Safety')},
+ {id:'organizations', title:'Research organizations', hint:'Academic centers and company disclosures', color:'#3a6579',match:r=>false},
+ {id:'access', title:'Prices & insurance', hint:'U.S. costs and coverage guide',color:'#825b30',match:r=>false},
+ {id:'updates', title:'Weekly changes', hint:'Recent archive activity', color:'#675b91', match:r=>false}
+];
+let section=sections[0];
+for(const item of sections){
+ const link=node('a',item.title);
+ link.href='#'+item.id;
+ link.style.setProperty('--accent',item.color);
+ const count=item.id==='updates'?changes.length:data.records.filter(item.match).length;
+ link.append(node('small',['access','organizations'].includes(item.id)?item.hint:item.hint+' · '+count));
+ el('directory').append(link);
+}
+const topics=[...new Set(data.records.flatMap(record=>record.topics))].sort();
+for(const topic of topics){
+ const count=data.records.filter(record=>record.topics.includes(topic)).length;
+ const button=node('button',topic+' · '+count);
+ button.dataset.topic=topic;
+ button.onclick=()=>{el('topic').value=el('topic').value===topic?'':topic;limit=50;draw()};
+ el('topic-grid').append(button);
+}
+function navigate(){
+ section=sections.find(item=>location.hash==='#'+item.id)||sections[0];
+ for(const link of el('directory').children){
+  if(link.hash==='#'+section.id)link.setAttribute('aria-current','page');
+  else link.removeAttribute('aria-current');
+ }
+ for(const id of ['search','topic','drug','source','posted'])el(id).value='';
+ el('heading').textContent=section.title;
+ el('workspace').style.setProperty('--accent',section.color);
+ el('updates').hidden=section.id!=='updates';
+ el('archive').hidden=['updates','organizations','access'].includes(section.id);
+ el('organizations').hidden=section.id!=='organizations';
+ el('access-guide').hidden=section.id!=='access';
+ el('readings').hidden=section.id!=='safety';
+ el('topic-grid').hidden=section.id!=='topics';
+ el('trial-tool').hidden=section.id!=='trials';
+ el('source').parentElement.hidden=['trials','papers'].includes(section.id);
+ el('topic').parentElement.hidden=['topics','safety'].includes(section.id);
+ limit=50;draw();
+}
+function draw(){
+ const q=el('search').value.trim().toLowerCase();
+ const rows=data.records.filter(r=>section.match(r)&&(!el('posted').value||r.has_results)&&(r.title+' '+r.drugs.flatMap(name=>[name,...(data.drug_aliases[name]||[])]).join(' ')).toLowerCase().includes(q)&&(!el('drug').value||r.drugs.includes(el('drug').value))&&(!el('topic').value||r.topics.includes(el('topic').value))&&(!el('source').value||r.source===el('source').value));
+ el('results').replaceChildren();el('count').textContent=`Matches: ${rows.length} · Showing ${Math.min(limit,rows.length) }`;
+ for(const r of rows.slice(0,limit)){
+  const card=document.createElement('article');card.append(node('div',r.source+' · '+r.id,'eyebrow'));
+  const h=document.createElement('h2'),link=node('a',r.title);link.href=r.url;link.target='_blank';link.rel='noopener noreferrer';h.append(link);card.append(h);
+  card.append(node('p',r.evidence_kind,'meta'));
+  const tags=document.createElement('div');for(const value of [...r.drugs,...r.topics])tags.append(node('span',value,'tag'));card.append(tags);
+  card.append(node('p','Source date: '+(r.source_date||'unknown')+' ('+r.date_kind+') · Last fetched: '+r.last_seen,'meta'));
+  if(r.status)card.append(node('p','Registration: '+r.status+' · Phase: '+(r.phases.join(', ')||'Unspecified')+' · Registry results: '+(r.has_results?'posted':'none posted'),'meta'));
+  if(r.countries?.length)card.append(node('p','Study locations: '+r.countries.join(', '),'meta'));
+  if(r.publication_types?.length)card.append(node('p','Publication types: '+r.publication_types.join(', '),'meta'));
+  el('results').append(card);
+ }
+ if(!rows.length)el('results').append(node('p','No matching records. Try another ingredient, topic or search term.'));
+ for(const button of el('topic-grid').children)button.setAttribute('aria-pressed',String(button.dataset.topic===el('topic').value));
+ el('more').hidden=rows.length<=limit;
+}
+for(const id of ['posted','search','drug','topic','source'])el(id).addEventListener('input',()=>{limit=50;draw()});
+el('more').addEventListener('click',()=>{limit+=50;draw()});window.addEventListener('hashchange',navigate);navigate();
+</script>
+</html>
